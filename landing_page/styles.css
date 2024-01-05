@@ -44,3 +44,34 @@ body{
 #heading-image img {
     max-width: 100%;
 }
+
+#second-part {
+    text-align: center;
+    padding: 10px 0 35px;
+}
+#second-part-flex { 
+    margin: auto;
+    width: 65%;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+#second-part-flex * {
+    flex: 1;
+}
+
+#second-part-flex * img {
+    border: 3px solid rgb(0, 119, 255);
+    border-radius: 15px;
+    max-width: 100%;
+}
+
+#third-section {
+    padding: 40px 300px;
+    background-color: #E5E7EB;
+}
+
+#quote-author {
+    text-align: right;
+}
