@@ -1,0 +1,46 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+#heading {
+    background-color: #1f2937;
+    color: #f9faf8;
+    padding: 0 75px 50px;
+}
+#nav {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 0 35px;
+}
+
+#nav-links ul{
+    display: flex;
+    gap: 1rem;
+}
+
+#nav-links ul li {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+#heading-title {
+    display: flex;
+    justify-content: space-between;
+    gap: 5rem;
+}
+
+@media (max-width: 700px){
+    #heading-title {
+        flex-direction: column;
+    }
+}
+
+#heading-title * {
+    flex: 1;
+}
+
+#heading-image img {
+    max-width: 100%;
+}
