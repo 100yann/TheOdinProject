@@ -75,3 +75,36 @@ body{
 #quote-author {
     text-align: right;
 }
+
+#call-to-action {
+    margin: 35px auto;
+    background-color: rgb(0, 119, 255);
+    border-radius: 5px;
+    display: flex;
+    width: 60%;
+    gap: 2rem;
+    padding: 30px 35px;
+    align-items: center;
+    color: white;
+}
+
+#cta-title {
+    width: 70%;
+}
+
+#cta-title h4, p {
+    margin: 0;
+}
+
+#cta-button {
+    flex: 1 0 auto;
+}
+
+#cta-button button {
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 5px 20px;
+    background-color: rgb(0, 119, 255);
+    color: white;
+    font-weight: bold;
+}
