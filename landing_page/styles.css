@@ -108,3 +108,11 @@ body{
     color: white;
     font-weight: bold;
 }
+
+#footer {
+    font-size: smaller;
+    background-color: #1f2937;
+    padding: 20px 250px;
+    text-align: center;
+    color: white;
+}
