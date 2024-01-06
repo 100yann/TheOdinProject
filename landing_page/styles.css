@@ -1,6 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 body{
     margin: 0;
     padding: 0;
+    font-family: 'Roboto', sans-serif;
+
 }
 
 #heading {
@@ -46,6 +50,7 @@ body{
     font-size: 48px;
     font-weight: bolder;
     color: #f9faf8;
+    margin-bottom: 0;
 }
 
 #heading-text p, #nav-links ul li {
@@ -58,7 +63,7 @@ body{
     border: 1px solid white;
     border-radius: 5px;
     padding: 5px 20px;
-    background-color: rgb(0, 119, 255);
+    background-color: #3882f6;
     color: white;
     font-weight: bold;
 }
@@ -81,6 +86,13 @@ body{
     text-align: center;
     padding: 10px 0 35px;
 }
+
+#second-part h3 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #1f2937;
+}
+
 #second-part-flex { 
     margin: auto;
     width: 65%;
@@ -94,7 +106,7 @@ body{
 }
 
 #second-part-flex * img {
-    border: 3px solid rgb(0, 119, 255);
+    border: 3px solid #3882f6;
     border-radius: 15px;
     max-width: 100%;
 }
@@ -112,7 +124,7 @@ body{
 
 #call-to-action {
     margin: 75px auto;
-    background-color: rgb(0, 119, 255);
+    background-color: #3882f6;
     border-radius: 5px;
     display: flex;
     width: 60%;
@@ -138,7 +150,7 @@ body{
     border: 1px solid white;
     border-radius: 5px;
     padding: 5px 20px;
-    background-color: rgb(0, 119, 255);
+    background-color: #3882f6;
     color: white;
     font-weight: bold;
 }
