@@ -1,0 +1,106 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;   
+}
+
+nav {
+    background-color: #4C3D3D;
+    display: flex;
+    gap: 35px;
+    padding: 10px;
+    justify-content: flex-end;
+    margin: 0;
+}
+
+h1, h4 {
+    margin: 0;
+}
+
+nav a {
+    color: white;
+}
+
+#header-container {
+    background-color: #FFD95A;
+    padding: 70px 0;
+}
+
+#header {
+    margin: 0 200px;
+    padding-right: 200px;
+}
+
+#header h1 {
+    font-size: 48px;
+}
+
+#header p {
+    font-size: 18px;
+    color: #4C3D3D;
+}
+
+/* PROGRESS SECTION */
+
+#progress-section {
+    height: 150px;
+    margin: auto;
+    text-align: center;
+    padding: 40px 0;
+}
+
+#bar-container {
+    width: 50%;
+    margin: auto;
+    padding: 10px 0;
+}
+
+#bar-bg {
+    background-color: #4C3D3D;
+    width: 100%;
+    height: 30px;
+    border-radius: 12px;
+  }
+
+@keyframes loadbar {
+    from {width: 0}
+    to {scale: 100%}
+}
+
+#bar-fg {
+    background-color: #9ADE7B;
+    height: 30px;
+    border-radius: 12px;
+    animation-duration: 1.5s;
+}
+
+/* FAQ Section */
+
+#faq-section {
+    padding: 50px 0;
+    margin: 0 200px;
+}
+
+#faq-section h2 {
+    text-align: center;
+}
+
+#question {
+    font-size: 22px;
+    padding-top: 15px;
+}
+
+#question p {
+    font-size: 18px;
+}
+
+#email-input, #email-submit {
+    border-radius: 5px;
+    padding: 5px 10px;
+
+}
+#email-submit {
+    background-color: #FFD95A;
+    font-weight: 500;
+    font-family: 'Roboto', sans-serif;
+}
