@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
         question.addEventListener('click', () => {dropdownAnswer(question)}) 
     })
 
-    const donateButton = document.getElementById('donate-button')
+    const donateButton = document.getElementById('donation-button')
     donateButton.addEventListener('click', () => {displayDonationField()})
     
     // Make sure email field is filled out if trying to submit
@@ -53,31 +53,6 @@ function validateEmailField(emailInput) {
 function displayDonationField() {
     const parentSection = document.getElementById('progress-section')
     const hasForm = parentSection.querySelector('form')
-
-    if (hasForm != null) {
-        hasForm.hidden == true ? hasForm.hidden = false : hasForm.hidden = true
-    } else {
-        const donationForm = document.createElement('form')
-        donationForm.setAttribute('method', 'post')
-
-        // Create an input for the donation
-        var donationAmount = document.createElement('input')
-        donationAmount.setAttribute('type', 'number')
-        donationAmount.setAttribute('name', 'donation-amount')
-        donationAmount.setAttribute('placeholder', 'Donation amount')
-        donationAmount.id = 'donation-amount'
-        donationForm.append(donationAmount)
-
-        // Create a submit button
-        var submitDonation = document.createElement('input')
-        submitDonation.setAttribute('type', 'submit')
-        submitDonation.setAttribute('value', 'Donate')
-        submitDonation.id = 'submit-donation'
-        donationForm.append(submitDonation)
-
-        parentSection.append(donationForm)
-    }
-
-    
+    hasForm.hidden == true ? hasForm.hidden = false : hasForm.hidden = true
     
 }

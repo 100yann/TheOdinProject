@@ -74,7 +74,7 @@ nav a {
     animation-duration: 1.5s;
 }
 
-#donate-button {
+#donation-button {
     margin-top: 10px;
     font-size: 24px;
     background-color: #FFD95A;
@@ -82,10 +82,38 @@ nav a {
     padding: 10px 15px;
 }
 
-#donate-button:hover {
+#donation-button:hover {
     background-color: #9ADE7B;
     cursor: pointer;
 }
+
+#donation-form {
+    width: 30%;
+    margin: auto;
+}
+
+#donation-amount-field {
+    text-align: left;
+}
+#donation-amount-field label {
+    text-align: left;
+    font-size: 24px;
+}
+#donation-amount-field-inner {
+    border: 1px solid #c8c8c8;
+    border-radius: 0.75rem;
+    padding: .5rem .75rem;
+}
+
+#donation-amount-field-inner:focus {
+    border: 1px solid #9ADE7B;
+}
+
+#donation-amount, #donation-amount:focus {
+    border: none;
+    outline: none;
+}
+
 /* FAQ Section */
 
 #faq-section {

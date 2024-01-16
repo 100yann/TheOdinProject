@@ -30,7 +30,17 @@
                 <div id='bar-fg'></div>
             </div>
         </div>
-        <button id="donate-button">Join the cause!</button>
+        <button id="donation-button">Join the cause!</button>
+        <form id='donation-form' action="" hidden>
+            <div id="donation-amount-field">
+                <label for="donation-amount">Enter your donation</label>
+                <div id="donation-amount-field-inner">
+                    <span>$</span>
+                    <input type="number" name="donation-amount" id="donation-amount" autocomplete="off">
+                </div>
+                <input type="submit" name="donation-submit" id="donation-submit">
+            </div>
+        </form>
     </div>
 
     <div id="faq-section">
