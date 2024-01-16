@@ -74,6 +74,18 @@ nav a {
     animation-duration: 1.5s;
 }
 
+#donate-button {
+    margin-top: 10px;
+    font-size: 24px;
+    background-color: #FFD95A;
+    border-radius: 12px;
+    padding: 10px 15px;
+}
+
+#donate-button:hover {
+    background-color: #9ADE7B;
+    cursor: pointer;
+}
 /* FAQ Section */
 
 #faq-section {
