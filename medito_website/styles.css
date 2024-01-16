@@ -74,6 +74,21 @@ nav a {
     animation-duration: 1.5s;
 }
 
+
+#donate-button {
+    margin: 10px;
+    font-size: 24px;
+    padding: 10px 15px;
+    border-radius: 12px;
+    font-family: 'Roboto', sans-serif;
+    background-color: #FFD95A;
+}
+
+#donate-button:hover{
+    background-color: #9ADE7B;
+    cursor: pointer;
+}
+
 /* FAQ Section */
 
 #faq-section {
