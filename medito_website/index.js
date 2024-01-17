@@ -1,4 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
+    const GOAL = 100000
+    var raised = 9250
+    var raisedPercentage = calculatePercentage(GOAL, raised)
+    console.log(raisedPercentage)
     displayProgressTitle()
     loadProgressBar()
 
@@ -16,6 +20,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const donationAmount = document.getElementById('donation-amount')
     donationAmount.addEventListener('keyup', () => {
         validateInputField('donation-submit', donationAmount.value)
+    })
+
+    const donationSubmit = document.getElementById('donation-submit')
+    donationSubmit.addEventListener('click', (event) => {
+        event.preventDefault()
+        raised += parseInt(donationAmount.value)
+        raisedPercentage = calculatePercentage(GOAL, raised)
     })
 
     // Make sure email field is filled out if trying to submit
@@ -64,5 +75,9 @@ function displayDonationField() {
     const parentSection = document.getElementById('progress-section')
     const hasForm = parentSection.querySelector('form')
     hasForm.hidden == true ? hasForm.hidden = false : hasForm.hidden = true
-    
+}
+
+
+function calculatePercentage(goal, raisedAmount) {
+    return (raisedAmount / goal) * 100
 }
