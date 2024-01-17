@@ -24,10 +24,21 @@ document.addEventListener('DOMContentLoaded', () => {
     const donationSubmit = document.getElementById('donation-submit')
     donationSubmit.addEventListener('click', (event) => {
         event.preventDefault()
-        raised += parseInt(donationAmount.value)
-        raisedPercentage = calculatePercentage(GOAL, raised)
-        displayProgressTitle(raisedPercentage)  
-        loadProgressBar(raisedPercentage)
+        const donationInputField = document.getElementById('donation-amount-field-inner')
+        if (donationAmount.value > 0) {
+            raised += parseInt(donationAmount.value)
+            raisedPercentage = calculatePercentage(GOAL, raised)
+            displayProgressTitle(raisedPercentage)  
+            loadProgressBar(raisedPercentage)
+            if (donationInputField.style.border == '2px solid red') {
+                donationInputField.style.border = '1px solid #c8c8c8'
+
+            }
+        } else {
+            const donationInputField = document.getElementById('donation-amount-field-inner')
+            donationInputField.style.border = '2px solid red'
+        }
+
 
     })
 
