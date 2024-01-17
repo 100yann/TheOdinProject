@@ -2,18 +2,27 @@ document.addEventListener('DOMContentLoaded', () => {
     displayProgressTitle()
     loadProgressBar()
 
-    // Reveal answer on click of question in FAQ
+    // Reveals answer on click of question in FAQ
     const questionDropdowns = document.querySelectorAll('#question')
     questionDropdowns.forEach((question) => {
         question.addEventListener('click', () => {dropdownAnswer(question)}) 
     })
 
+    // Reveals donation field when user clicks on 'Join the cause!'
     const donateButton = document.getElementById('donation-button')
     donateButton.addEventListener('click', () => {displayDonationField()})
     
+    // Check if donation amount is filled out if trying to submit
+    const donationAmount = document.getElementById('donation-amount')
+    donationAmount.addEventListener('keyup', () => {
+        validateInputField('donation-submit', donationAmount.value)
+    })
+
     // Make sure email field is filled out if trying to submit
     const emailInput = document.getElementById('email-input')
-    emailInput.addEventListener('keyup', () => {validateEmailField(emailInput)})
+    emailInput.addEventListener('keyup', () => {
+        validateInputField('email-submit', emailInput.value)
+    })
 })
 
 // 
@@ -39,13 +48,14 @@ function dropdownAnswer(question) {
     answer.hidden ? answer.hidden = false : answer.hidden = true;
 }
 
-// Check if email field is filled
-function validateEmailField(emailInput) {
-    const emailSubmit = document.getElementById('email-submit')
-    if (!emailInput.value) {
-        emailSubmit.disabled = true;
+
+// Check if an input field is filled
+function validateInputField(buttonId, value) {
+    const button = document.getElementById(buttonId)
+    if (value) {
+        button.disabled = false;
     } else {
-        emailSubmit.disabled = false;
+        button.disabled = true;
     };
 }
 
