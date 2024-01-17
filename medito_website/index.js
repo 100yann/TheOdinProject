@@ -1,10 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
     const GOAL = 100000
-    var raised = 9250
+    var raised = 10000
     var raisedPercentage = calculatePercentage(GOAL, raised)
-    console.log(raisedPercentage)
-    displayProgressTitle()
-    loadProgressBar()
+    displayProgressTitle(raisedPercentage)
+    loadProgressBar(raisedPercentage)
 
     // Reveals answer on click of question in FAQ
     const questionDropdowns = document.querySelectorAll('#question')
@@ -27,6 +26,9 @@ document.addEventListener('DOMContentLoaded', () => {
         event.preventDefault()
         raised += parseInt(donationAmount.value)
         raisedPercentage = calculatePercentage(GOAL, raised)
+        displayProgressTitle(raisedPercentage)  
+        loadProgressBar(raisedPercentage)
+
     })
 
     // Make sure email field is filled out if trying to submit
@@ -37,19 +39,17 @@ document.addEventListener('DOMContentLoaded', () => {
 })
 
 // 
-function displayProgressTitle() {
-    const barContainer = document.getElementById('progress-section')
-    const progressTitle = document.createElement('h1')
-    // placeholder value for now
-    progressTitle.textContent = `We're 85% there!`
-    barContainer.prepend(progressTitle)
+function displayProgressTitle(progress) {
+    const progressTitle = document.getElementById('progress-header')
+    progressTitle.textContent = `We're ${progress}% there!`
 }
 
 // Determine progress bar width and trigger animation to show it
-function loadProgressBar() {
+function loadProgressBar(progress) {
     const barProgress = document.getElementById('bar-fg')
+    console.log(progress, typeof(progress))
     // placeholder fixed value for now
-    barProgress.style.width = '85%'
+    barProgress.style.width = `${progress}%`
     barProgress.style.animationName = 'loadbar'
 }
 
@@ -79,5 +79,5 @@ function displayDonationField() {
 
 
 function calculatePercentage(goal, raisedAmount) {
-    return (raisedAmount / goal) * 100
+    return Math.round((raisedAmount / goal) * 100)
 }
