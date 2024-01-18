@@ -7,7 +7,9 @@
     <title>Fundraising Site</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit&family=Red+Hat+Display:wght@300&family=Roboto&display=swap" rel="stylesheet">
 </head>
 <body>
     <nav>
@@ -21,32 +23,40 @@
         <div id="header">
             <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>            
-        </div>            
+        </div>  
+        <div id="donation-section">
+            <div id="donation-section-content">
+                <div id="bar-container">
+                    <h1 id="donations-raised">$3000</h1>
+                    <div id='bar-bg'>
+                        <div id='bar-fg'></div>
+                    </div>
+                    <h3 id="donation-goal">5% raised of $100000</h3>
+                </div>
+                <hr>
+                <form id='donation-form' action="">
+                    <div id="donation-amount-field">
+                        <label for="donation-amount">Join the cause</label>
+                        <div id="donation-amount-field-inner">
+                            <div id="donation-currency">$</div>
+                            <input type="number" name="donation-amount" id="donation-amount" autocomplete="off" min="1">
+                        </div>
+                        <input type="submit" name="donation-submit" id="donation-submit" value="Donate">
+                    </div>
+                </form>                
+            </div>
+        </div>          
     </div>
 
-    <div id="progress-section">
-        <h1 id="progress-header"></h1>
-        <div id="bar-container">
-            <div id='bar-bg'>
-                <div id='bar-fg'></div>
-            </div>
-        </div>
-        <button id="donation-button">Join the cause!</button>
-        <form id='donation-form' action="" hidden>
-            <div id="donation-amount-field">
-                <label for="donation-amount">Enter your donation</label>
-                <div id="donation-amount-field-inner">
-                    <span>$</span>
-                    <input type="number" name="donation-amount" id="donation-amount" autocomplete="off">
-                </div>
-                <input type="submit" name="donation-submit" id="donation-submit" disabled>
-            </div>
-        </form>
-    </div>
+
 
     <div id="donation-rewards-section">
         <h1>Why you should help:</h1>
         <div id="rewards-container">
+            <div id="reward-card">
+                <h4>Lorem Ipsum</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
             <div id="reward-card">
                 <h4>Lorem Ipsum</h4>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>

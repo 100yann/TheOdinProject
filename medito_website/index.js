@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const GOAL = 100000
     var raised = 10000
     var raisedPercentage = calculatePercentage(GOAL, raised)
-    displayProgressTitle(raisedPercentage)
+    // displayProgressTitle(raisedPercentage)
     loadProgressBar(raisedPercentage)
 
     // Reveals answer on click of question in FAQ
