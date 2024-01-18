@@ -147,22 +147,41 @@ nav a {
 }
 /* Donation Rewards Section */
 #donation-rewards-section {
-    margin: 50px auto;
+    padding: 70px 200px;
     text-align: center;
 }
 
 #rewards-container {
     margin: 30px auto;
     display: flex;
-    gap: 60px;
+    gap: 20px;
     justify-content: space-around;
-    width: 60%;
 }
+
+#donation-rewards-heading {
+    font-size: 40px;
+}
+
 
 #reward-card {
     border: 1px solid #c8c8c8;
     border-radius: 15px;
-    padding: 15px;
+}
+
+#reward-card h4 {
+    font-size: 24px;
+    padding: 10px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    background-color: #9ADE7B;
+}
+
+#reward-card p {
+    padding: 0 15px 10px;
+    font-size: 18px;
+    font-family: 'Red Hat Display', sans-serif;
 }
 /* FAQ Section */
 
