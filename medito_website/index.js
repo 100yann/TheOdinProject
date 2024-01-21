@@ -1,19 +1,18 @@
 document.addEventListener('DOMContentLoaded', () => {
     const GOAL = 100000
     var raised = 10000
-    var raisedPercentage = calculatePercentage(GOAL, raised)
-    // displayProgressTitle(raisedPercentage)
-    loadProgressBar(raisedPercentage)
+    var raisedInPercentage = calculatePercentage(GOAL, raised)
+    updateProgressTitles(amountRaised = raised,
+        percentageRaised = raisedInPercentage,
+        goal = GOAL
+        )
+    loadProgressBar(raisedInPercentage)
 
     // Reveals answer on click of question in FAQ
     const questionDropdowns = document.querySelectorAll('#question')
     questionDropdowns.forEach((question) => {
         question.addEventListener('click', () => {dropdownAnswer(question)}) 
     })
-
-    // Reveals donation field when user clicks on 'Join the cause!'
-    const donateButton = document.getElementById('donation-button')
-    donateButton.addEventListener('click', () => {displayDonationField()})
     
     // Check if donation amount is filled out if trying to submit
     const donationAmount = document.getElementById('donation-amount')
@@ -27,9 +26,11 @@ document.addEventListener('DOMContentLoaded', () => {
         const donationInputField = document.getElementById('donation-amount-field-inner')
         if (donationAmount.value > 0) {
             raised += parseInt(donationAmount.value)
-            raisedPercentage = calculatePercentage(GOAL, raised)
-            displayProgressTitle(raisedPercentage)  
-            loadProgressBar(raisedPercentage)
+            raisedInPercentage = calculatePercentage(GOAL, raised)
+            
+            updateProgressTitles(raised, raisedInPercentage, GOAL)  
+            loadProgressBar(raisedInPercentage)
+
             if (donationInputField.style.border == '2px solid red') {
                 donationInputField.style.border = '1px solid #c8c8c8'
 
@@ -49,17 +50,19 @@ document.addEventListener('DOMContentLoaded', () => {
     })
 })
 
-// 
-function displayProgressTitle(progress) {
-    const progressTitle = document.getElementById('progress-header')
-    progressTitle.textContent = `We're ${progress}% there!`
+
+function updateProgressTitles(amountRaised, percentageRaised, goal) {
+    const donationsRaised = document.getElementById('donations-raised')
+    donationsRaised.textContent = `$${amountRaised}`
+
+    const donationGoal = document.getElementById('donation-goal')
+    donationGoal.textContent = `${percentageRaised}% raised of $${goal}`
 }
 
 // Determine progress bar width and trigger animation to show it
 function loadProgressBar(progress) {
     const barProgress = document.getElementById('bar-fg')
     console.log(progress, typeof(progress))
-    // placeholder fixed value for now
     barProgress.style.width = `${progress}%`
     barProgress.style.animationName = 'loadbar'
 }
@@ -79,13 +82,6 @@ function validateInputField(buttonId, value) {
     } else {
         button.disabled = true;
     };
-}
-
-
-function displayDonationField() {
-    const parentSection = document.getElementById('progress-section')
-    const hasForm = parentSection.querySelector('form')
-    hasForm.hidden == true ? hasForm.hidden = false : hasForm.hidden = true
 }
 
 
