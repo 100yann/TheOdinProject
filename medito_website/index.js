@@ -27,9 +27,10 @@ document.addEventListener('DOMContentLoaded', () => {
         if (donationAmount.value > 0) {
             raised += parseInt(donationAmount.value)
             raisedInPercentage = calculatePercentage(GOAL, raised)
-            
+
             updateProgressTitles(raised, raisedInPercentage, GOAL)  
             loadProgressBar(raisedInPercentage)
+            clearValues('donation-amount')
 
             if (donationInputField.style.border == '2px solid red') {
                 donationInputField.style.border = '1px solid #c8c8c8'
@@ -39,8 +40,6 @@ document.addEventListener('DOMContentLoaded', () => {
             const donationInputField = document.getElementById('donation-amount-field-inner')
             donationInputField.style.border = '2px solid red'
         }
-
-
     })
 
     // Make sure email field is filled out if trying to submit
@@ -87,4 +86,10 @@ function validateInputField(buttonId, value) {
 
 function calculatePercentage(goal, raisedAmount) {
     return Math.round((raisedAmount / goal) * 100)
+}
+
+
+function clearValues(field) {
+    fieldToClear = document.getElementById(field)
+    fieldToClear.value = ''
 }
