@@ -8,11 +8,18 @@ h1, h4 {
     margin: 0;
 }
 
+#section-heading {
+    font-size: 40px;
+    margin-top: 0;
+    margin-bottom: 40px;
+}
+    
 #header-container {
     background-color: #9ADE7B;
-    padding: 70px 200px;
     display: flex;
-    gap: 25px;
+    gap: 30px;
+    padding: 70px;
+    justify-content: center;
 }
 
 #header, #donation-section {
@@ -22,11 +29,13 @@ h1, h4 {
 }
 
 #header {
+    flex: 1;
     width: 60%;
 }
 
 #donation-section {
-    width: 35%;
+    flex: 0.5;
+    width: 30%;
     text-align: center;
 }
 
@@ -142,18 +151,20 @@ h1, h4 {
     font-size: 24px;
 
 }
+
 /* Donation Rewards Section */
 
 #donation-rewards-section {
-    padding: 50px 200px;
+    margin-top: 60px;
     text-align: center;
 }
 
 #rewards-container {
     margin: auto;
     display: flex;
-    gap: 20px;
-    justify-content: space-around;
+    padding: 0 100px 50px;
+    gap: 30px;
+    justify-content: center;
 }
 
 .icon {
@@ -162,14 +173,14 @@ h1, h4 {
 }
 
 
-#donation-rewards-heading {
-    font-size: 40px;
-    margin-bottom: 40px;
-}
-
 #reward-card {
+    flex: 1;
     border: 1px solid #c8c8c8;
     border-radius: 15px;
+}
+
+#reward-card:hover {
+    scale: 1.05;
 }
 
 #reward-card h4 {
@@ -188,14 +199,21 @@ h1, h4 {
     font-size: 18px;
     font-family: 'Red Hat Display', sans-serif;
 }
+
 /* FAQ Section */
 
 #faq-section {
-    padding: 50px 0;
-    margin: 0 200px;
+    padding: 70px;
+    background-color: #9ADE7B;
 }
 
-#faq-section h2 {
+#faq-content {
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 20px;
+}
+
+#faq-content h2 {
     text-align: center;
 }
 
@@ -217,4 +235,42 @@ h1, h4 {
     background-color: #FFD95A;
     font-weight: 500;
     font-family: 'Roboto', sans-serif;
+}
+
+
+@media (max-width: 1400px) {
+    #rewards-container {
+        flex-wrap: wrap;
+    }
+
+    #reward-card {
+        flex: 40%;
+    }
+
+    #header-container {
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    #header {
+        width: auto;
+    }
+
+    #donation-section {
+        flex: 1;
+        width: auto;
+    }
+}
+
+
+@media (max-width: 720px) {
+    #rewards-container {
+        flex-direction: column;
+    }
+
+    #header-container,
+    #faq-section, 
+    #rewards-container {
+        padding: 40px;
+    }
 }
